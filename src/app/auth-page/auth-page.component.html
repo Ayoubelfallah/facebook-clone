@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="auth-container">
+    <h1 class="auth-title">Authentication</h1>
+
+    <form class="auth-form" (submit)="submitForm()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="login.email" required pattern="{{ emailPattern }}">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="login.password" required>
+      </div>
+
+      <button type="submit" class="auth-button">Login</button>
+    </form>
+
+    <div class="text-center px-5 mt-4 mb-2">
+      <!--href="#createModal" <button class="btn btn-success btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#createModal">Create New Account</button> -->
+      <a  (click)="openModel()" data-toggle="modal"><button class="btn btn-success btn-lg" type="button"  >Create New Account</button></a>
+  </div>
+  </div>
+</div>
+<footer class="bg-white text-muted">
+  <div class="container-footer">
+    <!-- language -->
+    <div class="d-flex flex-wrap">
+      <p class="footer-text">English (UK)</p>
+      <p class="footer-text">தமிழ்</p>
+      <p class="footer-text">తెలుగు</p>
+      <p class="footer-text">ಕನ್ನಡ</p>
+      <p class="footer-text">हिन्दी</p>
+      <p  class="footer-text">മലയാളം</p>
+      <p class="footer-text">Tiếng Việt</p>
+      <p class="footer-text">中文(台灣)</p>
+      <p class="footer-text">한국어</p>
+      <p class="footer-text">日本語</p>
+      <span style="margin-left:5px;"><i class="fa fa-plus"></i></span>
+    </div>
+    <hr />
+    <!-- actions -->
+    <div class="d-flex flex-wrap">
+      <p class="footer-text2">Sign Up</p>
+      <p class="footer-text2">Login</p>
+      <p class="footer-text2">Messenger</p>
+      <p class="footer-text2">Facebook Lite</p>
+      <p class="footer-text2">Watch</p>
+      <p class="footer-text2">Places</p>
+      <p class="footer-text2">Games</p>
+      <p class="footer-text2">Marketplace</p>
+      <p class="footer-text2">Facebook Pay</p>
+      <p class="footer-text2">Oculus</p>
+      <p class="footer-text2">Portal</p>
+      <p class="footer-text2">Instagram</p>
+      <p class="footer-text2">Bulletin</p>
+      <p class="footer-text2">Local</p>
+      <p class="footer-text2">Fundraisers</p>
+      <p class="footer-text2">Services</p>
+      <p class="footer-text2">Voting Information Centre</p>
+      <p class="footer-text2">Groups</p>
+      <p class="footer-text2">About</p>
+      <p class="footer-text2">Create ad</p>
+      <p class="footer-text2">Create Page</p>
+      <p class="footer-text2">Developers</p>
+      <p class="footer-text2">Careers</p>
+      <p class="footer-text2">Privacy</p>
+      <p class="footer-text2">Cookies</p>
+      <p class="footer-text2">AdChoices</p>
+      <p class="footer-text2">Terms</p>
+      <p class="footer-text2">Help</p>
+    </div>
+    <!-- copy -->
+    <div class="mt-4">
+      <p class="footer-text">Meta &copy; 2022</p>
+    </div>
+  </div>
+</footer>

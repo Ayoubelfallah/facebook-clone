@@ -1,0 +1,80 @@
+.reaction-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+  // border-top: 1px solid #e4e6eb;
+  // border-bottom: 1px solid #e4e6eb;
+  column-gap: 0.2rem;
+
+  p {
+    margin-bottom: 0rem;
+  }
+
+  .reaction-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem;
+
+
+    .icon {
+      padding: 0.2rem;
+      margin-right: 0.3rem;
+      margin-top: 0.2rem;
+      display: flex;
+      align-items: center;
+
+      i {
+        filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%)
+          hue-rotate(174deg) brightness(94%) contrast(86%);
+
+        &.like {
+          filter: invert(39%) sepia(57%) saturate(200%) saturate(200%)
+            saturate(200%) saturate(200%) saturate(200%) saturate(147.75%)
+            hue-rotate(202deg) brightness(97%) contrast(96%);
+        }
+      }
+    }
+
+    p {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #65676b;
+
+      &.like {
+        color: #3578e5;
+      }
+
+      &.love {
+        color: #e53935;
+      }
+
+      &.care,
+      &.haha,
+      &.wow,
+      &.sad {
+        color: rgb(247, 177, 37);
+      }
+
+      &.angry {
+        color: rgb(233, 113, 15);
+      }
+    }
+
+    &:hover {
+      background-color: #f2f3f5;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

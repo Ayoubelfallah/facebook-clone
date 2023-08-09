@@ -1,0 +1,47 @@
+.gaming {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  flex-flow: row;
+  margin-top: 3.5rem;
+  margin-left: 20rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.side-nav {
+  margin-top: 3.5rem;
+}
+// div{
+//   border: 2px red dotted;
+// }
+
+.carousel-body {
+  height: 300px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .side-nav {
+    display: none;
+  }
+
+  .gaming {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .content {
+    width: 95%;
+  }
+
+  .main {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mat-card {
+    width: 100%;
+  }
+}

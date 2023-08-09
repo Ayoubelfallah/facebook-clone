@@ -1,0 +1,90 @@
+@import "src/styles/mixins.scss";
+.pop-up {
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  @include flex-props(center, center, column);
+  border-radius: 6px;
+  padding: 16px;
+}
+.content {
+  @include flex-props(center, flex-start, row);
+  .image {
+    // width: 100px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #c0c0c0;
+    }
+  }
+  .details {
+    width: 270px;
+    margin-top: 5px;
+    padding: 0px 16px;
+    .name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #050505;
+      padding: 4px 0px;
+    }
+    .additions {
+      @include flex-props(flex-start, flex-start, row);
+      margin: 5px 0px;
+      .icon {
+        margin: 5px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .describe {
+        margin: 5px;
+        font-size: 0.88rem;
+      }
+    }
+  }
+}
+.footer {
+  @include flex-props(space-between, center, row);
+  padding: 0px 5px;
+  margin-top: 5px;
+  .btn {
+    @include flex-props(center, center, row);
+    width: 158px;
+    height: 36px;
+    background-color: #e4e6e8;
+    margin: 0px 2px;
+    .icon {
+      padding: 4px;
+      margin-top: -4px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .text {
+      padding: 4px;
+      font-size: 0.93rem;
+      font-weight: 600;
+    }
+  }
+  .add {
+    background-color: #1877f2;
+    color: white;
+    .icon {
+      filter: invert(100%);
+    }
+  }
+  .more {
+    width: 50px;
+    .text {
+      margin-bottom: 7px;
+      font-weight: 1000;
+      font-size: 1rem;
+    }
+  }
+}

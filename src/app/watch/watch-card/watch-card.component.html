@@ -1,0 +1,65 @@
+
+<div class="main">
+  <mat-card class="post" *ngFor="let data of d; let i = index">
+<mat-card-title-group>
+      <mat-card-title class="watch-username" >
+        <img mat-card-avatar class="watch-user-dp"src={{data.user_dp}}>
+       <div class="space"><span></span></div>
+       <p> {{data.username | capitalize}}
+        <mat-card-subtitle class="hours">
+         {{data.posted_date | capitalize}} <mat-icon>visibilty</mat-icon>
+        </mat-card-subtitle>
+        </p>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <iframe width="800" height="400" [src]= "data.video" frameborder="0" allow="  autoplay; encrypted-media; " ></iframe>
+
+    <mat-card-footer>
+      <!-- <div class="buttons">
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon style="font-size: medium; text-indent: -5px;" >thumb_up_outline</mat-icon>like</button>
+
+        <mat-menu #menu="matMenu" yPosition="below">
+          <button mat-menu-item class="like-button"> <img src="https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"><img src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"> <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif"><img src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"><img src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"><img src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif"></button>
+        </mat-menu>
+
+        <button mat-button><mat-icon style="font-size: medium; text-indent: -5px;">chat_bubble</mat-icon>comment</button>
+        <button mat-button><mat-icon style="font-size: medium; text-indent: -5px; ;" >reply</mat-icon>share</button>
+      </div> -->
+      <div class="center-reactions">
+        <app-comments-section [reacted]="reacted[i]" ></app-comments-section>
+      </div>
+
+
+        <div class="views" >
+          <div>
+          <i
+        data-visualcompletion="css-img"
+        class="like"
+        style="
+          background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/hnprZx-fkAF.png');
+          background-position: 0px -238px;
+          background-size: 26px 656px;
+          width: 18px;
+          height: 18px;
+          background-repeat: no-repeat;
+          display: inline-block;
+          color:#4484ED;
+          margin-right: 4px;
+          filter: invert(39%) sepia(57%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(147.75%) hue-rotate(202deg) brightness(97%) contrast(96%);
+        "
+
+      ></i>
+    </div>
+       {{data.no_of_like}} - {{data.no_of_comments}} comments - {{data.no_of_views}} views
+        </div>
+
+
+    </mat-card-footer>
+
+  </mat-card>
+
+</div>
+
+
+

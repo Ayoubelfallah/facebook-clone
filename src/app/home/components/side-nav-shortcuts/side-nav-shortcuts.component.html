@@ -1,0 +1,10 @@
+<div class="section">
+  <div class="shortcuts">
+    <p class="text">Your shortcuts</p>
+    <p class="edit"><a href="#">Edit</a></p>
+  </div>
+  <app-side-nav-items
+    *ngFor="let shortcut of shortcuts"
+    [navItem]="shortcut"
+  ></app-side-nav-items>
+</div>

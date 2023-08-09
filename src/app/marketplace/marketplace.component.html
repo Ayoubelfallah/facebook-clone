@@ -1,0 +1,117 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<div class="market-place">
+  <div class="side-nav">
+    <app-side-nav-marketplace data="market"></app-side-nav-marketplace>
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <h2 style="display: flex; justify-content: space-between">
+        Today's picks
+        <a>
+          <i
+            style="
+              background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/nL9TB-3Qcnw.png');
+              color: #0571ed;
+              background-position: 0px -300px;
+              background-size: 26px 448px;
+              width: 16px;
+              height: 16px;
+              background-repeat: no-repeat;
+              display: inline-block;
+            "
+          ></i>
+          Perundurai<span
+            class="rfua0xdk pmk7jnqg stjgntxs ni8dbmo4 ay7djpcl q45zohi1"
+            >&nbsp;</span
+          ><span aria-hidden="true">·</span> 60km</a
+        >
+      </h2>
+    </div>
+
+    <div class="row1">
+      <div *ngFor="let item of market">
+        <mat-card class="example-card">
+          <img
+            mat-card-image
+            class="example-card-image"
+            src="{{ item.src }}"
+            alt="Photo of a Shiba Inu"
+          />
+          <mat-card-content class="example-card-content">
+            <h3>
+              <i class="fa fa-rupee" style="font-size: 18px"></i>
+              {{ item.price }}
+            </h3>
+            <p>{{ item.dec }}</p>
+            <p class="loc">{{ item.location }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="row1">
+      <div *ngFor="let item of market">
+        <mat-card class="example-card">
+          <img
+            mat-card-image
+            class="example-card-image"
+            src="{{ item.src }}"
+            alt="Photo of a Shiba Inu"
+          />
+          <mat-card-content class="example-card-content">
+            <h3>
+              <i class="fa fa-rupee" style="font-size: 18px"></i>
+              {{ item.price }}
+            </h3>
+            <p>{{ item.dec }}</p>
+            <p class="loc">{{ item.location }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="row1">
+      <div *ngFor="let item of market">
+        <mat-card class="example-card">
+          <img
+            mat-card-image
+            class="example-card-image"
+            src="{{ item.src }}"
+            alt="Photo of a Shiba Inu"
+          />
+          <mat-card-content class="example-card-content">
+            <h3>
+              <i class="fa fa-rupee" style="font-size: 18px"></i>
+              {{ item.price }}
+            </h3>
+            <p>{{ item.dec }}</p>
+            <p class="loc">{{ item.location }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="row1">
+      <div *ngFor="let item of market">
+        <mat-card class="example-card">
+          <img
+            mat-card-image
+            class="example-card-image"
+            src="{{ item.src }}"
+            alt="Photo of a Shiba Inu"
+          />
+          <mat-card-content class="example-card-content">
+            <h3>
+              <i class="fa fa-rupee" style="font-size: 18px"></i>
+              {{ item.price }}
+            </h3>
+            <p>{{ item.dec }}</p>
+            <p class="loc">{{ item.location }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.friend-section{
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: #f0f2f5;
+  width:100%;
+}
+.side-nav{
+  width:28.5%;
+}
+.content{
+  width:70.5%;
+}
+@media only screen and (max-width:1150px){
+  .side-nav{
+    display:none;
+  }
+  .content{
+    width:100%;
+  }
+}

@@ -1,0 +1,64 @@
+<form (submit)="submitForm()" #signupForm="ngForm">
+  <div *ngIf="signupForm.submitted && signupForm.invalid" class="error-message">Veuillez remplir tous les champs.</div>
+
+  <label for="first_name">First name:</label>
+  <input type="text" id="first_name" [(ngModel)]="formData.first_name" name="first_name" required>
+
+  <label for="last_name">Last name:</label>
+  <input type="text" id="last_name" [(ngModel)]="formData.last_name" name="last_name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+
+  <label for="password">Mot de passe:</label>
+  <input type="password" id="password" [(ngModel)]="formData.password" name="password" required>
+  <!-- <label for="email">Email:</label>
+  <input type="email" id="email" [(ngModel)]="formData.email" name="email" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com$"
+    [ngClass]="{ 'invalid-field': submitted && signupForm.controls['email']?.errors }">
+  <div *ngIf="submitted && signupForm.controls['email']?.errors?.required" class="error-message">L'email est requis.</div>
+  <div *ngIf="submitted && signupForm.controls['email']?.errors?.pattern" class="error-message">L'email doit se terminer par @gmail.com.</div>
+
+  <label for="password">Mot de passe:</label>
+  <input type="password" id="password" [(ngModel)]="formData.password" name="password" required minlength="5"
+    [ngClass]="{ 'invalid-field': submitted && signupForm.controls['password']?.errors }">
+  <div *ngIf="submitted && signupForm.controls['password']?.errors?.required" class="error-message">Le mot de passe est requis.</div>
+  <div *ngIf="submitted && signupForm.controls['password']?.errors?.minlength" class="error-message">Le mot de passe doit contenir au moins 5 caractères.</div> -->
+  
+  <!-- <label for="date_of_birth">Date of birth:</label>
+  <input type="text" id="date_of_birth" [(ngModel)]="formData.date_of_birth" name="date_of_birth" required> -->
+<div>
+  <label for="date_of_birth">Date of birth:</label>
+  <br>
+  <input type="date" id="date_of_birth" [(ngModel)]="formData.date_of_birth" name="date_of_birth" required>
+</div>
+  <!-- <label for="gender">Gender:</label>
+  <input type="text" id="gender" [(ngModel)]="formData.gender" name="gender" required> -->
+  
+  <label for="gender">Gender:</label>
+  <select id="gender" [(ngModel)]="formData.gender" name="gender" required>
+    <option value="" disabled selected>Select your gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    
+  </select>
+  <label for="image">Image:</label>
+  <div>
+<input type="file" id="image" (change)="onFileSelected($event)" name="image" accept="image/*">
+<br>
+<!-- <button (click)="submitForm()">Soumettre</button> -->
+  </div>
+
+  <label for="education">Scolarité:</label>
+  <input type="text" id="education" [(ngModel)]="formData.scolarite" name="education">
+  
+  <label for="relationship_status">Situation amoureuse:</label>
+  <input type="text" id="relationship_status" [(ngModel)]="formData.situation_amoureuse" name="relationship_status">
+  
+  <label for="current_city">Ville actuelle:</label>
+  <input type="text" id="current_city" [(ngModel)]="formData.ville_actuelle" name="current_city">
+  
+  <label for="hometown">Ville d'origine:</label>
+  <input type="text" id="hometown" [(ngModel)]="formData.ville_origine" name="hometown">
+
+  <button type="submit" [disabled]="signupForm.invalid">Sign up</button>
+</form>

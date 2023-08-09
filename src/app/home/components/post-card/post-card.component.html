@@ -1,0 +1,78 @@
+
+<div>
+  <p></p>
+</div>
+<div class="main">
+<mat-card class="post-card" *ngFor="let data of postcardarr;let i = index" >
+<div class="post-head">
+
+<div class="username">
+  <mat-card-title class="header">
+      <img mat-card-avatar [matMenuTriggerFor]="avatarmenu" src={{data.userdp}}>
+      <mat-menu #avatarmenu="matMenu" yPosition="below">
+       <mat-button mat-menu-item class="avatar-menu" ><img mat-card-avatar src="{{data.userdp}}">
+       <div class="avatar-card"><mat-card-title style="font-size: small;"><p style="line-height: 25px;"><mat-icon>person</mat-icon> mutual friends with {{data.mutual_friend_1}},<br>{{data.mutual_friend_2}} and 20 more</p></mat-card-title></div>
+       <div class="avatar-card"><mat-card-title style="font-size: small;"><p style="line-height: 25px;"><mat-icon>person_add</mat-icon> become friends with {{data.become_friend_1}},<br>{{data.become_friend_2}} and 20 more</p></mat-card-title></div>
+
+      </mat-button>
+      </mat-menu>
+      <p> {{data.username | capitalize}}
+        <mat-card-subtitle class="usernametab">
+          <span *ngIf="data.last_seen !== 'active'">Last Seen &middot; </span>
+          <span [class.fb-blue]="data.last_seen === 'active'">{{data.last_seen}} </span>
+           <mat-icon style="font-size: smaller; transform: translateY(12%);">visibility</mat-icon>
+
+        </mat-card-subtitle>
+      </p>
+    </mat-card-title>
+    </div>
+    <div>
+    <button mat-icon-button class="menu-button"><mat-icon>more_horiz</mat-icon></button>
+  </div>
+</div>
+  <div *ngIf="data.imgsrc !== null">
+    <img mat-card-image src={{data.imgsrc}}>
+  </div>
+  <div *ngIf="data.imgsrc === '' || data.imgsrc === null || data.text != null">
+    <p class=".postText">{{data.text}}</p>
+  </div>
+
+  <div class="people-view">
+  <div class="like">
+    <div>
+      <i
+    data-visualcompletion="css-img"
+    class="like"
+    style="
+      background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/hnprZx-fkAF.png');
+      background-position: 0px -238px;
+      background-size: 26px 656px;
+      width: 18px;
+      height: 18px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      color:#4484ED;
+      margin-right: 4px;
+      filter: invert(39%) sepia(57%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(147.75%) hue-rotate(202deg) brightness(97%) contrast(96%);
+    "
+
+  ></i>
+</div> {{data.no_of_likes}}
+</div>
+    <p class="comment-view">{{data.no_of_comments}} comments</p>
+  </div>
+<div>
+  <mat-divider ></mat-divider>
+</div>
+
+<app-comments-section [reacted]="reactions[i]" (commentActive)="focusCommentBox(i)"></app-comments-section>
+<div>
+  <mat-divider ></mat-divider>
+</div>
+<!-- https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"><img src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"> <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif"><img src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"><img src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"><img src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif -->
+<div class="comments">
+  <app-comment-box [comments]="[comments[i]]"></app-comment-box>
+</div>
+
+</mat-card>
+</div>

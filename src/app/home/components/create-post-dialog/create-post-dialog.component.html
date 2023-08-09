@@ -1,0 +1,47 @@
+<div class="dialog">
+    <div class="title">
+        <div class="topic"> <b>Create post</b> </div>
+        <div class="cross" (click)="onNoClick()">
+            <div aria-label="Close" class="" role="button" tabindex="0"><i data-visualcompletion="css-img" class="hu5pjgll m6k467ps" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/y1/r/Ll50feNiZuJ.png&quot;); background-position: -132px -70px; background-size: 190px 150px; width: 20px; height: 20px; padding-top: 10px; display: inline-block;"></i>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="profile">
+        <app-profile-icon [big]="true" profileImg="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg"></app-profile-icon>
+        <b>Mark Zuckerburg</b>
+    </div>
+    <div class="write-post">
+        <textarea placeholder="What's on your mind, Mark?"  (click)="buttonActive()" id="textarea" autofocus></textarea>
+    </div>
+    <div class="add">
+      <div class="addContainer">
+        <div class="addText">
+          Add to your post
+        </div>
+        <div class="icons">
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -242px; background-size: 34px 654px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -216px; background-size: 34px 654px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -190px; background-size: 34px 654px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/jFFXSLBdcxF.png'); background-position: 0px -234px; background-size: 26px 260px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/zICu7c4IlHH.png'); background-position: 0px -130px; background-size: 26px 734px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -112px; background-size: 34px 654px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button (click)="postData()" routerLink="/home" [ngClass]="activeStatus? 'active' : ''">Post</button>
+
+
+</div>

@@ -1,0 +1,12 @@
+@mixin flex-props($jc: space-around, $ai: stretch, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+
+@mixin round-div($size: 10px) {
+  width: $size;
+  height: $size;
+  border-radius: $size;
+}

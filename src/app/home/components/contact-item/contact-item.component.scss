@@ -1,0 +1,51 @@
+@import "src/styles/mixins.scss";
+@import "src/styles/variables.scss";
+
+.contact-item {
+  @include flex-props($jc: flex-start, $ai: center);
+  margin: 0.5% 2%;
+  padding: 4% 0.5%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  background-color: $light-grey;
+}
+
+.contact-img {
+  position: relative;
+  width: 16%;
+  padding: auto;
+  margin: 4%;
+  margin-left: 0;
+
+  img,
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include round-div($size: 30px);
+    border: 0.01px solid black;
+  }
+
+  mat-icon {
+    background-color: #eee;
+    border-radius: 20px;
+    margin-left: 10px;
+  }
+
+  .active-circle {
+    @include round-div($size: 10px);
+    position: absolute;
+    border: 2px solid white;
+    background-color: $active-green;
+    right: 0;
+    transform: translate(-50%, 60%);
+  }
+}
+
+.contact-name h4 {
+  margin-bottom: 0;
+}

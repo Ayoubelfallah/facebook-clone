@@ -1,0 +1,41 @@
+<!--  "tip center" data-tooltip="Home"  -->
+
+<div class="friend-card-item" (mouseleave) ="mouseLeave()">
+  <div class="card-image" >
+   <img src="{{friendrequest.image_url}}" alt="profile-pic"/>
+  </div>
+  <!-- description popup card (onhover) starts-->
+  <div class="model" *ngIf="openDescription">
+    <app-pop-detail (mouseleave) ="mouseLeave()" [details]="friendrequest"></app-pop-detail>
+  </div>
+  <!-- description popup card (onhover) ends-->
+  <div class="card-content">
+    <div class="name" (mouseenter) ="mouseEnter()" >{{friendrequest.name}}</div>
+    <div *ngIf="friendrequest.accept==='neutral'">
+      <div class="mutual-friends">
+        <div *ngIf="friendrequest.mutual_friends>0" class="images">
+          <img src="{{friendrequest.friends_url}}" alt="friend1" class="friend1"/>
+          <img *ngIf="friendrequest.mutual_friends>1" src="https://thumbs.dreamstime.com/b/concept-open-magic-book-pages-water-land-small-child-fantasy-nature-learning-copy-space-166401875.jpg" alt="friend2" class="friend2">
+        </div>
+        <div class="count tip" [attr.datatooltip]="friendsList">{{friendrequest.mutual_friends}} mutual friend<span *ngIf="friendrequest.mutual_friends!=='1'">s</span></div>
+      </div>
+    </div>
+    <div *ngIf="friendrequest.accept!=='neutral'">
+      <div class="replace">
+        <div class="status">{{friendrequest.accept}}</div>
+      </div>
+    </div>
+    <div *ngIf="friendrequest.accept==='neutral' || friendrequest.accept==='Request cancelled'">
+      <div id="button">
+        <button class="add" (click)="addFriend(friendrequest.name,'yes')">{{button1}}</button>
+        <button class="remove" (click)="removeElement(friendrequest.name)">{{button2}}</button>
+      </div>
+    </div>
+    <div *ngIf="friendrequest.accept==='Request sent' || friendrequest.accept==='Request accepted'">
+      <div id="button">
+        <button class="add" style="background-color: white;color:white">{{button1}}</button>
+        <button class="remove" (click)="addFriend(friendrequest.name,'no')">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

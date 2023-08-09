@@ -1,0 +1,40 @@
+@import "src/styles/variables.scss";
+
+.right-nav {
+  height: 90vh;
+  overflow-y: auto;
+  position: fixed;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    visibility: hidden;
+  }
+
+  &:hover::-webkit-scrollbar {
+    visibility: visible;
+    transition: all 1s ease-in-out;
+  }
+
+  /* Track */
+  &:hover::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+
+  /* Handle */
+  &:hover::-webkit-scrollbar-thumb {
+    background: #ced0d4;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  &:hover::-webkit-scrollbar-track:hover {
+    background: #f2f3f5;
+  }
+}
+
+.center-line {
+  width: 90%;
+  margin: auto;
+  height: 1px;
+  background-color: $light-grey;
+}

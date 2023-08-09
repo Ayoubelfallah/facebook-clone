@@ -1,0 +1,124 @@
+.cover {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+
+  .cover-img {
+    height: 60vh;
+    overflow-y: hidden;
+    border-radius: 10px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 90vh;
+      object-fit: cover;
+      transform: translateY(-15%);
+      box-shadow: inset 0px 0px 10px 0px #ababab, 5px 5px 5px 1px #dddddd;
+    }
+
+    .edit-cover-img {
+      display: flex;
+      position: absolute;
+      bottom: 1.5rem;
+      right: 2rem;
+      flex-direction: column;
+      z-index: 1;
+
+      .edit-cover-btn {
+        display: flex;
+        background-color: #fafafa;
+        align-items: center;
+        padding: 0.3rem 0.7rem;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: small;
+        user-select: none;
+
+        .camera {
+          margin-top: 0.3rem;
+          margin-right: 0.4rem;
+        }
+
+        &:hover {
+          background-color: #ebedf0;
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .edit-options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: -9.2rem;
+    right: 2rem;
+    background-color: white;
+    padding: 0.5rem;
+    z-index: 2;
+    width: 35%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px #dddddd;
+    display: none;
+
+    .items {
+      display: flex;
+      padding: 0.5rem;
+      border-radius: 5px;
+      align-items: center;
+      font-size: small;
+      font-weight: bold;
+
+      i {
+        margin-right: 0.8rem;
+      }
+
+      &:hover {
+        background-color: #ebedf0;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    hr {
+      margin: 0.3rem 0;
+      border-radius: 5%;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .cover {
+    padding: 0rem 5%;
+
+    .cover-img {
+      height: 20vh;
+
+      img {
+        object-fit: cover;
+      }
+
+      .edit-cover-img {
+        .edit-cover-btn {
+          .camera {
+            margin-right: 0rem;
+          }
+
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

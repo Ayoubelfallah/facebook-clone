@@ -1,0 +1,38 @@
+<div class="side-nav">
+  <app-side-nav-items
+    *ngFor="let navItem of navItems"
+    [navItem]="navItem"
+  ></app-side-nav-items>
+  <app-side-nav-items
+    [navItem]="lastItem"
+    (click)="toggleSideNav()"
+    [imgHeight]="'15px'"
+    [marginBottom]="'0.5rem'"
+    class="last-item"
+  ></app-side-nav-items>
+  <app-side-nav-shortcuts [shortcuts]="shortcuts"></app-side-nav-shortcuts>
+  <div class="footer">
+    <p>Privacy</p>
+    <p>Terms</p>
+    <p>Advertising</p>
+    <p>
+      Ad choices
+      <i
+        data-visualcompletion="css-img"
+        class="hu5pjgll m6k467ps"
+        style="
+          background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/8C7IJNEsnom.png');
+          background-position: -176px -76px;
+          background-size: 190px 146px;
+          width: 12px;
+          height: 12px;
+          background-repeat: no-repeat;
+          display: inline-block;
+        "
+      ></i>
+    </p>
+    <p>Cookies</p>
+    <p>More</p>
+    <p>Meta © 2022</p>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="comments">
+    <div class="comment" *ngFor="let comment of comments">
+      <div class="comment-img" *ngIf="comment.name">
+        <img src="{{ comment.img }}" alt="{{ comment.name }}" />
+      </div>
+      <div class="comment-detail" *ngIf="comment.name">
+        <div class="comment-box">
+          <div class="name">
+            <p>{{ comment.name | capitalize }}</p>
+          </div>
+          <div class="comment">
+            <p>{{ comment.text }}</p>
+          </div>
+        </div>
+        <div class="reaction">
+          <div class="option">
+            <p>Like</p>
+          </div>
+          <div class="option">
+            <p>Reply</p>
+          </div>
+        </div>
+      </div>
+      <div class="icon" *ngIf="comment.name">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          width="1em"
+          height="1em"
+        >
+          <g fill-rule="evenodd" transform="translate(-446 -350)">
+            <path
+              d="M458 360a2 2 0 1 1-4 0 2 2 0 0 1 4 0m6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+            ></path>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="write-comment">
+    <div class="profile-img">
+      <img
+        src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg"
+        alt=""
+      />
+    </div>
+    <div class="input-div">
+      <div class="input">
+        <input type="text" [(ngModel)]="commentText" class="cmt" placeholder="Write a comment..." (keyup.enter)="addComment()" />
+      </div>
+      <div class="icons">
+        <div class="icon">
+          <i
+            data-visualcompletion="css-img"
+            style="
+              background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/hnprZx-fkAF.png');
+              background-position: 0px -424px;
+              background-size: 26px 656px;
+              width: 16px;
+              height: 16px;
+              background-repeat: no-repeat;
+              display: inline-block;
+            "
+          ></i>
+        </div>
+        <div class="icon">
+          <i
+            data-visualcompletion="css-img"
+            style="
+              background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/hnprZx-fkAF.png');
+              background-position: 0px -370px;
+              background-size: 26px 656px;
+              width: 16px;
+              height: 16px;
+              background-repeat: no-repeat;
+              display: inline-block;
+            "
+          ></i>
+        </div>
+        <div class="icon">
+          <i
+            data-visualcompletion="css-img"
+            style="
+              background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/hnprZx-fkAF.png');
+              background-position: 0px -442px;
+              background-size: 26px 656px;
+              width: 16px;
+              height: 16px;
+              background-repeat: no-repeat;
+              display: inline-block;
+            "
+          ></i>
+        </div>
+        <div class="icon">
+          <i
+            data-visualcompletion="css-img"
+            style="
+              background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/hnprZx-fkAF.png');
+              background-position: 0px -496px;
+              background-size: 26px 656px;
+              width: 16px;
+              height: 16px;
+              background-repeat: no-repeat;
+              display: inline-block;
+            "
+          ></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Press Enter to post.</p>
+  </div>

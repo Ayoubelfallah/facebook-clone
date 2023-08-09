@@ -1,0 +1,42 @@
+.create-post {
+  width: 50%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+.home {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.5rem;
+  background-color: #f0f2f5;
+}
+.feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 0;
+}
+
+.right-sidenav {
+  display: block;
+  width: 21%;
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .right-sidenav {
+    display: none;
+  }
+
+  .home {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .feed {
+    margin-left: 22%;
+  }
+}

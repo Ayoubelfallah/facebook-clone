@@ -1,0 +1,137 @@
+<div class="main">
+  <mat-card class="post">
+    <mat-card-title-group>
+      <mat-card-title class="watch-username">
+        <img
+          mat-card-avatar
+          class="watch-user-dp"
+          src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg"
+        />
+        <div class="space"><span></span></div>
+        <p>
+          <b>Mark</b> is playing <b>Leaugue of Legends </b> 🎮
+          <mat-card-subtitle class="hours">
+            feb 1 <mat-icon>visibilty</mat-icon>
+          </mat-card-subtitle>
+        </p>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <iframe
+      width="800"
+      height="400"
+      src="https://www.youtube.com/embed/p4QG59y6FGE"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <!-- <mat-card-footer>
+      <div class="buttons">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon style="font-size: medium; text-indent: -5px"
+            >thumb_up_outline</mat-icon
+          >like
+        </button>
+
+        <mat-menu #menu="matMenu" yPosition="below">
+          <button mat-menu-item class="like-button">
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"
+            /><img
+              src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"
+            />
+            <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif" /><img
+              src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"
+            /><img
+              src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"
+            /><img
+              src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif"
+            />
+          </button>
+        </mat-menu>
+
+        <button mat-button>
+          <mat-icon style="font-size: medium; text-indent: -5px"
+            >chat_bubble</mat-icon
+          >comment
+        </button>
+        <button mat-button>
+          <mat-icon style="font-size: medium; text-indent: -5px">reply</mat-icon
+          >share
+        </button>
+      </div>
+      <p></p>
+    </mat-card-footer> -->
+    <div class="center-reactions">
+      <app-comments-section [reacted]="reacted[0]" ></app-comments-section>
+    </div>
+  </mat-card>
+
+  <mat-card class="post">
+    <mat-card-title-group>
+      <mat-card-title class="watch-username">
+        <img
+          mat-card-avatar
+          class="watch-user-dp"
+          src="https://yt3.ggpht.com/qH3O0F_fbvANyzk904IHQaxDUootPy38WwTQxInclcM0b2s4ttnkdHxeURQ0y3YJD87AOqAjdg=s176-c-k-c0x00ffffff-no-rj-mo"
+        />
+        <div class="space"><span></span></div>
+        <p>
+          <b>Unreal Dreamer </b> is playing <b>Arknights </b> 🎮
+          <mat-card-subtitle class="hours">
+            feb 2 <mat-icon>visibilty</mat-icon>
+          </mat-card-subtitle>
+        </p>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <iframe
+      width="800"
+      height="400"
+      src="https://www.youtube.com/embed/-dCIPjxH3wU"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <div class="center-reactions">
+      <app-comments-section [reacted]="reacted[1]" ></app-comments-section>
+    </div>
+  </mat-card>
+
+  <mat-card class="post">
+    <mat-card-title-group>
+      <mat-card-title class="watch-username">
+        <img
+          mat-card-avatar
+          class="watch-user-dp"
+          src="https://www.bestpvpers.com/wp-content/uploads/2021/09/tenz-1.jpg"
+        />
+        <div class="space"><span></span></div>
+        <p>
+          <b>TenZ</b> is playing <b>Valorant </b> 🎮
+          <mat-card-subtitle class="hours">
+            feb 3 <mat-icon>visibilty</mat-icon>
+          </mat-card-subtitle>
+        </p>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <iframe
+      width="800"
+      height="400"
+      src="https://www.youtube.com/embed/uIt298IgFhk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <div class="center-reactions">
+      <app-comments-section [reacted]="reacted[2]" ></app-comments-section>
+    </div>
+  </mat-card>
+</div>

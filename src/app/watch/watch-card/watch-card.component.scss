@@ -1,0 +1,105 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.post {
+  height: fit-content;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.like-button {
+  width: 600px;
+  border-radius: 10px;
+}
+mat-menu-item {
+  border-radius: 50px;
+}
+
+.like-button img {
+  height: 40px;
+  width: 40px;
+}
+
+.buttons {
+  margin: 10px;
+  display: flex;
+  float: left;
+}
+.views {
+  display: flex;
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+
+}
+.center-reactions{
+  margin: 0 1.5rem;
+}
+mat-card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.watch-user-dp {
+  float: left;
+  margin-left: -10px;
+}
+.space {
+  padding-left: 10px;
+}
+.watch-username {
+  margin-left: 10px;
+  font-size: medium;
+}
+.post p {
+  margin-left: 50px;
+  margin-top: 5px;
+  font-size: medium;
+}
+.video {
+  height: auto;
+  width: 100%;
+}
+.hours {
+  margin-top: -10px;
+}
+.post-caption {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-video {
+  height: 300px;
+  width: 850px;
+}
+
+@media only screen and (min-width:1200px)
+{
+  .main{
+  margin-left:25rem;
+  }
+
+}
+@media only screen and (max-width:840px)
+{
+  .post{
+  width:100%;
+  margin: auto;
+  margin-bottom: 20px;
+  }
+   iframe{
+     width: 100%;
+    margin: auto;
+   }
+   .views{
+     display: none;
+   }
+
+
+}
+
+
+

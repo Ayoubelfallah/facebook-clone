@@ -1,0 +1,37 @@
+@import "src/styles/mixins.scss";
+@import "src/styles/variables.scss";
+
+.create-room {
+  background-color: white;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 500px;
+  overflow-x: auto;
+  @include flex-props($jc: flex-start, $ai: center);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .create-room-btn {
+    @include flex-props($jc: center, $ai: center);
+    min-width: fit-content;
+    padding: 8px 12px;
+    border: 0.5px solid $light-grey;
+    border-radius: 30px;
+    cursor: pointer;
+    i {
+      margin-right: 10px;
+    }
+
+    b {
+      color: $fb-blue;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+
+
+
+<div class="nav-side-container" [ngClass]="sideNav.item==='Browse all' ? 'nav-side-container-active' : ''">
+    <div class="icon" >
+      <i [ngStyle]="{'background-image':'url('+sideNav.img_url+')','background-position':sideNav.background_position,'background-size':sideNav.background_size}"></i>
+    </div>
+    <div class="item-name">{{sideNav.item}}</div>
+    <div *ngIf="sideNav.arrow_icon" class="arrow"><i></i></div>
+  </div>
+
+   
+
+  

@@ -1,0 +1,26 @@
+<div>
+  <div class="middle-panel">
+    <div class="story-section">
+      <div class="story create">
+        <div class="dp-image">
+          <img
+            src="https://source.unsplash.com/collection/happy-people"
+            alt="Profile pic"
+          />
+        </div>
+        <span class="dp-container">
+          <a routerLink="/createstory"><i class="fa fa-plus"></i></a>
+        </span>
+        <span class="name">Create Story</span>
+      </div>
+
+      <div class="story" *ngFor="let story of storyList">
+        <img src="{{ story.cardImg }}" alt="Anuska's story" />
+        <div class="dp-container">
+          <img src="{{ story.avatarImg }}" alt="" />
+        </div>
+        <p class="name">{{ story.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

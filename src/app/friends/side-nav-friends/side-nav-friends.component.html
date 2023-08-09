@@ -1,0 +1,27 @@
+<div class="sidebar">
+  <div class="head">
+    <div class="heading" *ngIf="data==='friends'">Friends</div>
+    <div class="heading" *ngIf="data ==='watch'">Watch</div>
+    <div class="heading" *ngIf="data ==='gaming'">Gaming</div>
+    <div class="icon">
+      <i></i>
+    </div>
+  </div>
+  <div *ngIf="data==='friends'">
+    <app-side-nav-friend-items *ngFor="let sideNav of friendSideNav" [sideNav]="sideNav">
+
+    </app-side-nav-friend-items>
+  </div>
+  <div *ngIf="data==='watch'">
+    <app-side-nav-friend-items *ngFor="let sideNav of watchSideNav" [sideNav]="sideNav">
+
+    </app-side-nav-friend-items>
+  </div>
+  <div *ngIf="data==='gaming'">
+    <app-side-nav-friend-items *ngFor="let sideNav of gamingSideNav" [sideNav]="sideNav">
+
+    </app-side-nav-friend-items>
+  </div>
+
+
+</div>

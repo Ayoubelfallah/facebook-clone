@@ -1,0 +1,221 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<header >
+  <div>
+      <ul>
+          <!-- Left Elements start  -->
+          <li> <a routerLink="/home" id="fb"> <i class="fab fa-facebook-f"></i> </a> </li>
+          <li>
+            <div [ngClass]="{'select':selectForm}" >
+              <form class="search-content" >
+                <!-- <a href="#test" (click)="selectClass(0)">-->
+                   <i class="fa-solid fa-arrow-left arrow"></i>
+                <!--</a> -->
+                <div class="search" (click)="selectClass()">
+                  <button class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <input  class="search-txt" type="text" name="" placeholder="Search Facebook">
+                </div>
+                <div class="text">
+                  <p>No recent searches</p>
+                </div>
+              </form>
+           </div>
+        </li>
+        <!-- Left Elements start -->
+
+          <li id="space2"></li>
+          <!-- Center Elements start -->
+          <li>
+            <a class="tip center" (click)="active(1)" [ngClass]="activeTab===1 ? 'active' : 'noactive'" data-tooltip="Home" routerLink="/home" id="home" >
+              <mat-icon>home</mat-icon>
+            </a>
+          </li>
+          <li> <a class="tip center" (click)="active(2)" [ngClass]="activeTab===2 ? 'active' : 'noactive'" data-tooltip="Friends" routerLink="/friends" id="friend"><mat-icon>group</mat-icon> </a></li>
+          <li> <a class="tip center" (click)="active(3)" [ngClass]="activeTab===3 ? 'active' : 'noactive'" data-tooltip="Watch" routerLink="/watch" id="tv"> <mat-icon>ondemand_video</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(4)" [ngClass]="activeTab===4 ? 'active' : 'noactive'" data-tooltip="Marketplace" routerLink="/marketplace" id="marketplace">  <mat-icon>store</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(5)" [ngClass]="activeTab===5 ? 'active' : 'noactive'" data-tooltip="Gaming" routerLink="/gaming" id="gaming"> <mat-icon>view_quilt</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(6)" [ngClass]="activeTab===5 ? 'active' : 'noactive'" data-tooltip="More" routerLink="/home" id="more"> <mat-icon>menu</mat-icon> </a> </li>
+          <!-- Center Elements ends -->
+          <li id="space1"></li>
+          <!-- Right Elements start -->
+          <li>
+            <div class="profile" (click)="activeProfile()" routerLink="/profile" [ngClass]="{'profileActive':profileStatus}" >
+              <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture" >
+              <div class="name">Mark</div>
+            </div>
+          </li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(1)" [ngClass]="rightActiveTab===1 ? 'rightNavFocus' : ''" data-tooltip="Create" id="btn_add"><mat-icon>add</mat-icon></button> </li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(2)" [ngClass]="rightActiveTab===2 ? 'rightNavFocus' : ''" data-tooltip="Menu" id="btn_plus"><mat-icon>apps</mat-icon></button> </li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(3)" [ngClass]="rightActiveTab===3 ? 'rightNavFocus' : ''" data-tooltip="Message" id="btn_msg"><i class="fab fa-facebook-messenger"></i></button></li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(4)" [ngClass]="rightActiveTab===4 ? 'rightNavFocus' : ''" data-tooltip="Notification" id="btn_bell"> <i class="fas fa-bell"></i></button></li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(5)" [ngClass]="rightActiveTab===5 ? 'rightNavFocus' : ''" data-tooltip="Account" id="btn_profile"><mat-icon>arrow_drop_down</mat-icon></button>  </li>
+          <!-- Right Elements ends -->
+      </ul>
+  </div>
+</header>
+<!-- <div>
+  <app-side-container [display]="display"></app-side-container>
+</div> -->
+<div *ngIf="accountStatus" class="sideContainer" id="account">
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text" routerLink="/profile">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="second-session">
+    <div class="icon">
+      <mat-icon>feedback</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Give feedback</div>
+      <div class="profile-link">Help us improve Facebook.</div>
+    </div>
+  </div>
+  <div class="third-session" id="third-session-1">
+    <div class="icon">
+      <mat-icon>settings</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Settings & Privacy</div>
+    </div>
+    <div class="arrow">
+      <mat-icon>navigate_next</mat-icon>
+    </div>
+  </div>
+  <div class="third-session" id="third-session-2">
+    <div class="icon">
+      <mat-icon>help</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Help & support</div>
+    </div>
+    <div class="arrow">
+      <mat-icon>navigate_next</mat-icon>
+    </div>
+    </div>
+  <div class="third-session" id="third-session-3">
+    <div class="icon">
+      <mat-icon>nightlight</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Display & accessibility</div>
+    </div>
+    <div class="arrow" >
+      <mat-icon>navigate_next</mat-icon>
+    </div>
+    </div>
+  <div class="third-session" id="third-session-4" routerLink="/">
+    <div class="icon">
+      <mat-icon>logout</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Logout</div>
+    </div>
+  </div>
+  <div class="bottom-session">
+    <p class="profile-link">Privacy  · Terms  · Advertising  · Ad choices   · Cookies  ·  More · Meta © 2022</p>
+  </div>
+</div >
+<div *ngIf="messageStatus" class="sideContainer" id="message">
+  <div class="title-message">
+    <h2>Messages</h2>
+  </div>
+  <div class="top-section" (click)="rightNavActive(6)">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="boxStatus" class="sideContainer" id="boxMessage">
+  <div class="top-section">
+    <div class="img">
+      <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Mark Zuckerberg</div>
+    </div>
+    <div class="closeBtn">
+      <button class="tipClose" (click)="rightNavActive(7)"><span class="material-symbols-rounded">close</span></button>
+    </div>
+  </div>
+  <div class="midlle-section">
+    <div class="messageRight">
+      <p>wa3alikom salam</p>
+    </div>
+    <div class="messageLeft">
+      <p>salam</p>
+    </div>
+  </div>
+  <div class="bottom-section">
+    <div class="textMessage">
+      <input  class="message-txt" type="text" name="" placeholder="your message">
+    </div>
+    <div class="sendBtn">
+      <button class="tipSend"><span class="material-symbols-rounded" style="font-size: 38px;">send</span></button>
+    </div>
+  </div>
+</div>

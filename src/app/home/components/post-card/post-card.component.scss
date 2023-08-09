@@ -1,0 +1,119 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.post-card {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.post-head {
+  display: flex;
+  justify-content: space-between;
+}
+.header p {
+  margin-left: 50px;
+  margin-top: 5px;
+  font-size: medium;
+}
+.header img {
+  float: left;
+}
+
+.like-views {
+  color: blue;
+  float: left;
+}
+.like {
+  float: left;
+  display: flex;
+}
+.comment-view {
+  float: right;
+}
+
+.container {
+  margin-top: 5px;
+  display: flex;
+}
+
+.content {
+  background-color: rgb(202, 201, 201);
+  margin-left: 5px;
+  padding-left: 20px;
+  padding-right: 200px;
+  height: max-content;
+  width: fit-content;
+  border-radius: 30px;
+}
+
+.menu-button {
+  float: right;
+  border-radius: 70%;
+}
+.usernametag {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .img {
+  justify-content: left;
+  align-items: left;
+}
+
+.comment-input {
+  text-align: left;
+  padding: 5px;
+  border-radius: 3%;
+  border: 0;
+}
+
+.buttons {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.username {
+  float: left;
+}
+.like-button {
+  width: 600px;
+  border-radius: 10px;
+}
+mat-menu-item {
+  border-radius: 50px;
+}
+
+.like-button img {
+  height: 40px;
+  width: 40px;
+}
+.avatar-menu {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.avatar-card {
+  float: right;
+}
+.avatar-card mat-icon {
+  margin-right: 0;
+}
+.avatar-menu img {
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+.fb-blue{
+  color:#0b84ed;
+}
+.postText{
+  margin-bottom: 3px;
+}
+

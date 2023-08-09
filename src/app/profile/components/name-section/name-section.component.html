@@ -1,0 +1,225 @@
+<div class="name-section">
+  <div class="profile">
+    <img
+      src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg"
+      alt="Mark"
+    />
+
+  </div>
+  <div class="name">
+    <div class="display-content">
+      <div class="text">
+        <h1>Mark Zuckerberg</h1>
+        <i
+          data-visualcompletion="css-img"
+          aria-label="Verified account"
+          role="img"
+          style="
+            background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/8C7IJNEsnom.png');
+            background-position: -84px -92px;
+            background-size: 190px 146px;
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            display: inline-block;
+          "
+        ></i>
+      </div>
+      <div class="friends-count">
+      
+        <div class="modifier" *ngIf="isAccountCreationVisible">
+          
+          <div class="edit-profile">
+            <img
+              src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/tmaz0VO75BB.png"
+              alt=""
+            />
+          
+            
+          </div>
+         
+        </div>
+      </div>
+      <div class="friends-image">
+        <img
+          *ngFor="let friend of friendsList.slice(0, 8)"
+          src="{{ friend.img }}"
+          alt="{{ friend.name }}"
+        />
+      </div>
+    </div>
+    <div class="options">
+    <!--  <div class="story" >
+        <img
+          src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/gmRaVnWydOi.png"
+          alt=""
+        />
+        <p >Add to Story</p>
+      </div>-->
+      <div class="edit-profile">
+        <img (click)="toggleAccountCreation()"
+          src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/tmaz0VO75BB.png"
+          alt=""
+        />
+        <p (click)="toggleAccountCreation()">Edit profile</p>
+
+      </div>
+      <div   *ngIf="isAccountCreationVisible"  class="sideContainer">
+        <img (click)="toggleAccountCreation()"
+        src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/tmaz0VO75BB.png"
+        alt=""
+      />
+        <h1>Edit profile</h1>
+        <div>
+          <label>First_ame:</label>
+          <input type="first_name" [(ngModel)]="first_name" />
+        </div>
+        <div>
+          <label>Last_ame:</label>
+          <input type="last_name" [(ngModel)]="last_name" />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input type="email" [(ngModel)]="email" />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" [(ngModel)]="password" />
+        </div>
+        <div>
+          <label>Photo:</label>
+          <input type="text" [(ngModel)]="photo" />
+        </div>
+        <div>
+          <label>Date:</label>
+          <input type="text" [(ngModel)]="date" />
+        </div>
+        <div>
+          <label>Birthday:</label>
+          <input type="text" [(ngModel)]="birthday" />
+        </div>
+        <div>
+          <label>Situation familiale:</label>
+          <input type="text" [(ngModel)]="situationFamiliale" />
+        </div>
+        <div>
+          <label>Ville:</label>
+          <input type="text" [(ngModel)]="ville" />
+        </div>
+        <div>
+          <label>Photo:</label>
+          <input type="file" accept="image/*" (change)="handlePhotoChange($event)" />
+        </div>
+       <div class="subcancel"> 
+        <button class="submitbtn" (click)="submitAccount()">Submit</button>
+        <button class="cancelbtn" (click)="cancelAccountCreation()">Cancel</button>
+      </div>
+        <style>
+      
+      button {
+        
+       
+        margin-left: 350px;
+  
+        display: flex;
+              align-items: center;
+              padding: 0.6rem;
+              background-color: #e4e6eb;
+              border-radius: 7%;
+              color: #000;
+              cursor: pointer;
+              user-select: none;
+              font-weight: 600;
+                font-size: small;
+                margin-bottom: 0rem;
+      }
+      .subcancel{
+        display: inline-block;
+margin-right: 10px;
+      }
+
+      .cancelbtn {
+        padding: 4px 20px;
+        background-color: #f44336;
+        margin-left: 250px;
+        border-radius: 6px;
+        position: absolute;
+      }
+      .submitbtn {
+        padding: 4px 20px;
+        background-color: #36f43f;
+        border-radius: 6px;
+        position: absolute;
+      }
+      button:hover {
+        background-color: #1a68d6;
+      }
+      
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type="first_name"],
+      input[type="last_name"],
+      input[type="email"],
+      input[type="password"],
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s ease;
+      }
+      input[type="first_name"]:focus,
+      input[type="last_name"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus,
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #4285f4;
+      }
+      .sideContainer {
+        z-index: 110;
+        display: block;
+        overflow: auto;
+        width: 480px;
+        height: 500px;
+        @include flex(column, "", space-between, "");
+        border: 1px solid gainsboro;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        right: 500px;
+        margin-top: 3.3rem;
+        background-color: white;
+        border-radius: 10px;
+        padding: 12px 16px 0px 16px;
+      }
+      .modifier {
+        width: 450px;
+        
+      background-color: white;
+      align-items: center;
+              padding: 0.9rem;
+              border-radius: 18px;
+      
+      } 
+     
+        </style>
+      </div>
+    </div>
+  </div>
+
+</div>

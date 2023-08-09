@@ -1,0 +1,39 @@
+@import "src/styles/mixins.scss";
+@import "src/styles/variables.scss";
+
+.sponser-item {
+  @include flex-props($ai: center);
+  margin: 2.5%;
+  padding: 2%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sponser-item:hover {
+  background-color: $light-grey;
+}
+
+.sponser-image {
+  width: 30%;
+}
+
+.sponser-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.sponser-content {
+  width: 65%;
+  padding: auto;
+
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+.sponser-content a {
+  color: $grey;
+  text-decoration: none;
+  font-size: 80%;
+}

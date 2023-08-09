@@ -1,0 +1,66 @@
+// input[type="radio"] {
+//   margin-left: 10px;
+  
+// }
+
+// #createModal {
+//   margin: 0;
+//   padding: 0;
+
+// }
+.error-message {
+  color: red;
+  margin-top: 5px;
+  
+}
+
+.error-dialog {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+ 
+  input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+ 
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #0056b3;
+    }
+    /* Styles pour le message de succès */
+
+
+  }
+}

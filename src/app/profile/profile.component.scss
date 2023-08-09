@@ -1,0 +1,13 @@
+.profile {
+  padding: 0 13%;
+  background-color: #fff;
+  margin-top: 3.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .profile {
+    padding: 0;
+    padding-left: 15%;
+    padding-right: -10%;
+  }
+}

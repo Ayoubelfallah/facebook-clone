@@ -1,0 +1,38 @@
+@import "src/styles/mixins.scss";
+@import "src/styles/variables.scss";
+
+.contact-img {
+  position: relative;
+  width: 20px;
+  @include round-div($size: 30px);
+  padding: auto;
+  margin: 0 8px;
+  cursor: pointer;
+
+  img {
+    @include round-div($size: 30px);
+    width: 100%;
+    border: 0.01px solid black;
+  }
+
+  img.big {
+    @include round-div($size: 40px);
+  }
+
+  .active-circle {
+    @include round-div($size: 10px);
+    position: absolute;
+    border: 2px solid white;
+    background-color: $active-green;
+    right: 0;
+    bottom: 0;
+  }
+
+  .active-circle.big {
+    @include round-div($size: 12px);
+  }
+}
+
+.contact-img.big {
+  @include round-div($size: 40px);
+}

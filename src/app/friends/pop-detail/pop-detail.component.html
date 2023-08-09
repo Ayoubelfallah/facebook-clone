@@ -1,0 +1,50 @@
+<div class="pop-up">
+  <div class="content">
+    <div class="image">
+      <img *ngIf="details.image_url" src="{{details.image_url}}" alt="profile-pic">
+      <img *ngIf="details.profileImg" src="{{details.profileImg}}" alt="profile-pic">
+    </div>
+    <div class="details">
+      <div class="name">{{details.name}}</div>
+      <div class="additions">
+        <div class="icon">
+          <img *ngIf="details.work" src="https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/1jhUSRNtU5P.png" alt="work">
+          <img *ngIf="details.mutual" src="https://static.xx.fbcdn.net/rsrc.php/v3/yY/r/BV4nLpdbGwx.png" alt="mutual friends">
+        </div>
+        <div class="describe">
+          <div *ngIf="details.work" class="text">{{details.work}}</div>
+          <div *ngIf="details.mutual" class="text">{{details.mutual}} mutual friends</div>
+        </div>
+      </div>
+      <div class="additions">
+        <div class="icon">
+          <img *ngIf="details.education" src="https://static.xx.fbcdn.net/rsrc.php/v3/y1/r/O171qLGxiOi.png" alt="graduate">
+          <img *ngIf="!details.education" src="https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/qnIRrO9viqd.png" alt="location">
+        </div>
+        <div class="describe">
+          <div *ngIf="details.education" class="text">{{details.education}}</div>
+          <div *ngIf="!details.education" class="text">Lives in Coimbatore, Tamil Nadu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+   <div class="btn" [class.add]="details.education">
+     <div class="icon">
+      <img *ngIf="details.education" src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/33EToHSZ94f.png" alt="add">
+      <img *ngIf="!details.education" src="https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/c9BbXR9AzI1.png" alt="friends">
+     </div>
+     <div *ngIf="details.education" class="text">Add Friend</div>
+     <div *ngIf="!details.education" class="text">Friends</div>
+   </div>
+   <div class="btn" [class.add]="!details.education">
+    <div class="icon">
+      <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/YIxFfN5ecJG.png" alt="message">
+    </div>
+    <div class="text">Message</div>
+  </div>
+  <div class="btn more">
+    <div class="text">...</div>
+  </div>
+  </div>
+</div>

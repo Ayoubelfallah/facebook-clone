@@ -1,0 +1,9 @@
+<div class="nav-item" [style]="{ marginBottom: marginBottom }">
+  <img
+    *ngIf="navItem.img_url"
+    src="{{ navItem.img_url }}"
+    alt="{{ navItem.item }}"
+    [ngStyle]="{ height: imgHeight }"
+  />
+  <p>{{ navItem.item }}</p>
+</div>

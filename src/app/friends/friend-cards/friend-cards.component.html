@@ -1,0 +1,19 @@
+<div class="section">
+  <div *ngIf="friendrequest.length>=1">
+    <div class="title">
+        <div class="name">Friend requests</div>
+        <a class="link">See all</a>
+    </div>
+
+    <div class="Cards" >
+      <app-friend-card-item *ngFor="let request of friendrequest" [friendrequest]="request" button1="Confirm" button2="Delete" (ItemEvent)="removeItem($event)" (acceptStatus)="updateStatus($event)"></app-friend-card-item>
+    </div>
+  </div>
+  <div class="title">
+    <div class="name">People you may know</div>
+    <a class="link">See all</a>
+  </div>
+  <div class="Cards">
+    <app-friend-card-item *ngFor="let request of suggested" [friendrequest]="request" button1="Add Friend" button2="Remove" (ItemEvent)="removeSuggest($event)" (acceptStatus)="updateStatus($event)"></app-friend-card-item>
+  </div>
+</div>

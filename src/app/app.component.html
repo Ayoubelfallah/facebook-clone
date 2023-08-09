@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col" *ngIf="router.url !== '/' && router.url !== '/createstory'">
+    <app-navbar></app-navbar>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>

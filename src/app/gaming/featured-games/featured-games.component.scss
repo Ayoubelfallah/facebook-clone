@@ -1,0 +1,41 @@
+.featured-games {
+  padding: 1%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.outer {
+  height: 150px;
+  position: relative;
+  width: 150px;
+  background: #000;
+}
+
+.inner {
+  position: absolute;
+  height: 45%;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(68 59 59 / 78%);
+  color: #fff;
+  width: 100%;
+  padding: 2%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.carousel-cell {
+  margin-right: 5px;
+}
+
+.genre {
+  text-align: center;
+  background-color: #000;
+  border-radius: 20px;
+  width: fit-content + 1px;
+  padding: 3px;
+}
